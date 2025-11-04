@@ -2,6 +2,8 @@
 
 Centro de Conhecimento em Segurança Cibernética - Um hub colaborativo para aprendizado e compartilhamento de conhecimento em cybersecurity.
 
+**Página**: [Cyber Knowledge Hub](https://cyber-knowledge-hub.pages.dev)
+
 ## 🎯 Objetivo
 
 Este projeto visa criar um centro de conhecimento completo e acessível sobre segurança cibernética, cobrindo desde conceitos fundamentais até técnicas avançadas. O conteúdo será desenvolvido de forma colaborativa pela comunidade.
