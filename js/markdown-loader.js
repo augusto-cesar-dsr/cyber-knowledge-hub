@@ -16,7 +16,9 @@ class MarkdownLoader {
             ['fundamentals', [
                 { file: 'cia-triad.md', title: 'CIA Triad', tags: ['fundamentos', 'conceitos'] },
                 { file: 'redes-basico.md', title: 'Fundamentos de Redes', tags: ['redes', 'protocolos', 'tcp-ip'] },
-                { file: 'protocolos-web.md', title: 'Protocolos Web Essenciais', tags: ['http', 'https', 'web'] }
+                { file: 'protocolos-web.md', title: 'Protocolos Web Essenciais', tags: ['http', 'https', 'web'] },
+                { file: 'fundamentos-essenciais.md', title: '12 Fundamentos Essenciais para a Arquitetura de Cibersegurança', tags: ['aaa', 'criptografia', 'hardening', 'zero-trust', 'forense', 'lgpd'] },
+                { file: 'gestao-vulnerabilidades.md', title: 'Gestão de Vulnerabilidades - Pilar da Cibersegurança', tags: ['vulnerabilidade', 'cvss', 'nessus', 'nmap', 'patching', 'ciberseguranca'] }
             ]],
             ['network-security', [
                 { file: 'firewalls.md', title: 'Firewalls', tags: ['firewall', 'network'] },
@@ -25,7 +27,9 @@ class MarkdownLoader {
                 { file: 'reconnaissance-lab.md', title: 'Lab 2 - Network Reconnaissance', tags: ['nmap', 'reconnaissance', 'scanning'] }
             ]],
             ['penetration-testing', [
-                { file: 'nmap.md', title: 'Nmap', tags: ['nmap', 'scanning'] }
+                { file: 'nmap.md', title: 'Nmap', tags: ['nmap', 'scanning'] },
+                { file: 'metasploit.md', title: 'Metasploit Framework', tags: ['metasploit', 'exploit', 'post-exploitation', 'pentest'] },
+                { file: 'sqlmap.md', title: 'Sqlmap - SQL Injection Automation', tags: ['sqlmap', 'sql-injection', 'web', 'pentest'] }
             ]],
             ['incident-response', [
                 { file: 'incident-handling.md', title: 'Tratamento de Incidentes', tags: ['incident-response', 'forensics'] }
