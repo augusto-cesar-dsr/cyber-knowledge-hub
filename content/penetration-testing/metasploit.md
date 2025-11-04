@@ -1,5 +1,5 @@
 ---
-title: "Metasploit Framework"
+title: Metasploit Framework
 date: 2025-10-31
 background: bg-[#3a1b2a]
 tags:

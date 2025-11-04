@@ -1,7 +1,7 @@
 ---
 title: 12 Fundamentos Essenciais para a Arquitetura de Cibersegurança
 date: 2025-10-31
-background: bg-[#2563eb]
+background: bg-[#00005c]
 tags:
   - aaa
   - criptografia

@@ -1,5 +1,5 @@
 ---
-title: "Sqlmap - SQL Injection Automation"
+title: Sqlmap - SQL Injection Automation
 date: 2025-10-31
 background: bg-[#1b3a2a]
 tags:
