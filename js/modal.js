@@ -257,8 +257,7 @@ function createModal() {
                 margin: 1rem 0;
                 line-height: 1.6;
             }
-            /* Glossary specific styles - only when modal title contains "Glossário" */
-            #content-modal:has(#modal-title:contains("Glossário")) #modal-body p strong,
+            /* Glossary specific styles - only when data-glossary attribute is present */
             #content-modal[data-glossary="true"] #modal-body p strong {
                 display: block;
                 background: linear-gradient(135deg, #00d4ff20, #00d4ff10);
@@ -266,12 +265,11 @@ function createModal() {
                 padding: 0.8rem 1rem;
                 margin: 1.5rem 0 0.5rem 0;
                 border-radius: 0 8px 8px 0;
-                color: #00d4ff;
+                color: #00d4ff !important;
                 font-size: 1.1em;
                 font-weight: 600;
             }
-            #content-modal:has(#modal-title:contains("Glossário")) #modal-body p:has(strong),
-            #content-modal[data-glossary="true"] #modal-body p:has(strong) {
+            #content-modal[data-glossary="true"] #modal-body p {
                 margin-bottom: 2rem;
                 padding-bottom: 1rem;
                 border-bottom: 1px solid #333;
