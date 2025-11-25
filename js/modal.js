@@ -8,6 +8,14 @@ function openModal(contentPath, title) {
     document.getElementById('modal-body').innerHTML = '<div style="text-align:center; padding:2rem; color:#ccc;">Carregando...</div>';
     document.getElementById('content-modal').style.display = 'flex';
     
+    // Mark as glossary if title contains "Glossário"
+    const modal = document.getElementById('content-modal');
+    if (title.includes('Glossário')) {
+        modal.setAttribute('data-glossary', 'true');
+    } else {
+        modal.removeAttribute('data-glossary');
+    }
+    
     // Parse contentPath to get section and filename
     const [section, filename] = contentPath.split('/');
     
@@ -249,8 +257,9 @@ function createModal() {
                 margin: 1rem 0;
                 line-height: 1.6;
             }
-            /* Glossary specific styles */
-            #modal-body p strong {
+            /* Glossary specific styles - only when modal title contains "Glossário" */
+            #content-modal:has(#modal-title:contains("Glossário")) #modal-body p strong,
+            #content-modal[data-glossary="true"] #modal-body p strong {
                 display: block;
                 background: linear-gradient(135deg, #00d4ff20, #00d4ff10);
                 border-left: 4px solid #00d4ff;
@@ -261,7 +270,8 @@ function createModal() {
                 font-size: 1.1em;
                 font-weight: 600;
             }
-            #modal-body p:has(strong) {
+            #content-modal:has(#modal-title:contains("Glossário")) #modal-body p:has(strong),
+            #content-modal[data-glossary="true"] #modal-body p:has(strong) {
                 margin-bottom: 2rem;
                 padding-bottom: 1rem;
                 border-bottom: 1px solid #333;
