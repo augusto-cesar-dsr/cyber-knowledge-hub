@@ -31,3 +31,4 @@ cd sqlmap
 
 # executar (não requer instalação)
 python3 sqlmap.py --help
+```

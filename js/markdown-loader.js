@@ -127,6 +127,10 @@ class MarkdownLoader {
     markdownToHtml(markdown) {
         let html = markdown;
         
+        // Clean up any terminal/control characters first
+        html = html.replace(/\[\d+~/g, '');
+        html = html.replace(/\x1b\[[0-9;]*m/g, '');
+        
         // First, protect code blocks by replacing them with placeholders
         const codeBlocks = [];
         let codeBlockIndex = 0;
@@ -154,10 +158,13 @@ class MarkdownLoader {
         // Process tables BEFORE other markdown elements
         html = this.parseMarkdownTables(html);
         
+        // Process horizontal rules BEFORE headers to avoid conflicts
+        html = html.replace(/(>|^|\n)---(\n|$)/g, '$1<hr style="border: none; border-top: 2px solid #333; margin: 2rem 0; opacity: 0.6;">$2');
+        
         // Now process other markdown elements (headers, bold, etc.)
-        html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
-        html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
-        html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+        html = html.replace(/### (.*?)(?=\n|$)/g, '<h3>$1</h3>');
+        html = html.replace(/## (.*?)(?=\n|$)/g, '<h2>$1</h2>');
+        html = html.replace(/# (.*?)(?=\n|$)/g, '<h1>$1</h1>');
         
         // Bold and italic
         html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');

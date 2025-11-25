@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/notifications.css">
     <link rel="stylesheet" href="css/markdown.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -199,37 +200,141 @@
 
         <!-- Fundamentals Section -->
         <section id="fundamentals" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-graduation-cap"></i> Fundamentos de Segurança</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('fundamentals/cia-triad', 'CIA Triad')">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3>CIA Triad</h3>
+                    <p>Conceitos fundamentais de Confidencialidade, Integridade e Disponibilidade</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('fundamentals/fundamentos-essenciais', 'Fundamentos Essenciais')">
+                    <i class="fas fa-book card-icon"></i>
+                    <h3>Fundamentos Essenciais</h3>
+                    <p>Base teórica e prática para iniciar em segurança cibernética</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('fundamentals/gestao-vulnerabilidades', 'Gestão de Vulnerabilidades')">
+                    <i class="fas fa-bug card-icon"></i>
+                    <h3>Gestão de Vulnerabilidades</h3>
+                    <p>Processos para identificar, avaliar e mitigar vulnerabilidades</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('fundamentals/redes-basico', 'Redes Básico')">
+                    <i class="fas fa-network-wired card-icon"></i>
+                    <h3>Redes Básico</h3>
+                    <p>Conceitos fundamentais de redes para segurança</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('fundamentals/protocolos-web', 'Protocolos Web')">
+                    <i class="fas fa-globe card-icon"></i>
+                    <h3>Protocolos Web</h3>
+                    <p>HTTP, HTTPS e outros protocolos essenciais para web security</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Network Security Section -->
         <section id="network-security" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-network-wired"></i> Segurança de Rede</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('network-security/firewalls', 'Firewalls')">
+                    <i class="fas fa-fire card-icon"></i>
+                    <h3>Firewalls</h3>
+                    <p>Configuração e gerenciamento de firewalls para proteção de rede</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('network-security/traffic-analysis-lab', 'Análise de Tráfego')">
+                    <i class="fas fa-chart-line card-icon"></i>
+                    <h3>Análise de Tráfego</h3>
+                    <p>Laboratório prático para análise de tráfego de rede</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('network-security/reconnaissance-lab', 'Reconhecimento')">
+                    <i class="fas fa-search card-icon"></i>
+                    <h3>Reconhecimento</h3>
+                    <p>Técnicas de reconhecimento e coleta de informações</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Penetration Testing Section -->
         <section id="penetration-testing" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-user-secret"></i> Testes de Penetração</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('penetration-testing/nmap', 'Nmap')">
+                    <i class="fas fa-radar card-icon"></i>
+                    <h3>Nmap</h3>
+                    <p>Guia completo da ferramenta de descoberta de rede</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('penetration-testing/metasploit', 'Metasploit')">
+                    <i class="fas fa-bomb card-icon"></i>
+                    <h3>Metasploit</h3>
+                    <p>Framework para desenvolvimento e execução de exploits</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+                <div class="content-card" onclick="openModal('penetration-testing/sqlmap', 'SQLMap')">
+                    <i class="fas fa-database card-icon"></i>
+                    <h3>SQLMap</h3>
+                    <p>Ferramenta automatizada para detecção de SQL injection</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Incident Response Section -->
         <section id="incident-response" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-exclamation-triangle"></i> Resposta a Incidentes</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('incident-response/incident-handling', 'Tratamento de Incidentes')">
+                    <i class="fas fa-clipboard-list card-icon"></i>
+                    <h3>Tratamento de Incidentes</h3>
+                    <p>Processos e procedimentos para resposta eficaz a incidentes</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Tools Section -->
         <section id="tools" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-tools"></i> Ferramentas</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('tools/burp-suite', 'Burp Suite')">
+                    <i class="fas fa-spider card-icon"></i>
+                    <h3>Burp Suite</h3>
+                    <p>Guia completo da ferramenta de teste de aplicações web</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Resources Section -->
         <section id="resources" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-link"></i> Recursos</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="alert('Seção em desenvolvimento')">
+                    <i class="fas fa-external-link-alt card-icon"></i>
+                    <h3>Links Úteis</h3>
+                    <p>Coleção de recursos externos para aprendizado contínuo</p>
+                    <div class="read-more">Em breve <i class="fas fa-clock"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Glossary Section -->
         <section id="glossary" class="content-section">
-            <!-- Content will be loaded dynamically from markdown files -->
+            <h2><i class="fas fa-book"></i> Glossário</h2>
+            <div class="content-cards">
+                <div class="content-card" onclick="openModal('glossary/index', 'Glossário de Termos')">
+                    <i class="fas fa-spell-check card-icon"></i>
+                    <h3>Termos Técnicos</h3>
+                    <p>Definições de termos importantes em segurança cibernética</p>
+                    <div class="read-more">Ler mais <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
         </section>
 
         <!-- Contributors Section -->
@@ -302,6 +407,7 @@
     <script src="js/markdown-loader.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/components.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

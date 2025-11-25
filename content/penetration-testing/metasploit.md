@@ -31,3 +31,4 @@ sudo apt install metasploit-framework
 
 # iniciar console
 msfconsole
+```
