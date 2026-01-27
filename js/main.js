@@ -47,8 +47,8 @@ class CyberKnowledgeApp {
     }
     
     handleKeyboardShortcuts(e) {
-        const sections = ['home', 'fundamentals', 'network-security', 'penetration-testing', 'incident-response', 'tools', 'resources', 'glossary'];
-        if (e.key >= '1' && e.key <= '8') {
+        const sections = ['home', 'fundamentals', 'network-security', 'penetration-testing', 'incident-response', 'tools', 'resources', 'labs', 'glossary'];
+        if (e.key >= '1' && e.key <= '9') {
             const sectionIndex = parseInt(e.key) - 1;
             if (sections[sectionIndex]) {
                 this.modules.navigation.showSection(sections[sectionIndex]);

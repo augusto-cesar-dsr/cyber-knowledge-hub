@@ -59,7 +59,13 @@ Este projeto visa criar um centro de conhecimento completo e acessível sobre se
 - Configurações e tutoriais
 - Comparativos e reviews
 
-### 6. Recursos
+### 7. Labs Práticos
+- Security Lab: SIEM com Wazuh
+- OWASP Top 10 Practice (em breve)
+- Incident Response Simulation (em breve)
+- Network Security Lab (em breve)
+
+### 8. Recursos
 - Links úteis
 - Certificações
 - Cursos recomendados
